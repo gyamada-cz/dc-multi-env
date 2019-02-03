@@ -8,6 +8,9 @@ services:
     networks:
       - default
       - front
+  back:
+    build:
+      context: ./back
 
 networks:
   front:

@@ -5,6 +5,9 @@ services:
       VIRTUAL_HOST: "env1.web.local"
     volumes:
       - ./web/env1.html:/usr/share/nginx/html/index.html:ro
+  back:
+    volumes:
+      - ./back/env1.html:/usr/share/nginx/html/index.html:ro
 
 networks:
   default:
