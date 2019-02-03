@@ -4,7 +4,7 @@ services:
     build:
       context: ./web
     volumes:
-      - ./web/proxy-to-back.conf:/etc/nginx/conf.d/proxy-to-backi.conf:ro
+      - ./web/proxy-to-back.conf:/etc/nginx/conf.d/proxy-to-back.conf:ro
     environment:
       VIRTUAL_HOST: "*.web.local,*.back.local"
     networks:
