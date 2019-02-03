@@ -10,11 +10,11 @@ services:
     networks:
       - default
       - front
+    depends_on:
+      - back
   back:
     build:
       context: ./back
-    depends_on:
-      - web
 
 networks:
   front:
