@@ -2,7 +2,7 @@ version: "3.5"
 services:
   web:
     environment:
-      VIRTUAL_HOST: "env2.web.local"
+      VIRTUAL_HOST: "env2.web.local,env2.back.local"
     volumes:
       - ./web/env2.html:/usr/share/nginx/html/index.html:ro
   back:

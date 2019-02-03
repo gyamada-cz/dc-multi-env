@@ -3,14 +3,18 @@ services:
   web:
     build:
       context: ./web
+    volumes:
+      - ./web/proxy-to-back.conf:/etc/nginx/conf.d/proxy-to-backi.conf:ro
     environment:
-      VIRTUAL_HOST: "*.web.local"
+      VIRTUAL_HOST: "*.web.local,*.back.local"
     networks:
       - default
       - front
   back:
     build:
       context: ./back
+    depends_on:
+      - web
 
 networks:
   front:
